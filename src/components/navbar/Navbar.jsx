@@ -52,7 +52,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 font-para text-xl font-semibold"
             >
               {links}
             </ul>
@@ -60,9 +60,11 @@ const Navbar = () => {
           <img className="w-1/5" src={brand} alt="" />
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{links}</ul>
+          <ul className="menu menu-horizontal px-1 font-para text-xl font-semibold">
+            {links}
+          </ul>
         </div>
-        <div className="navbar-end gap-3">
+        <div className="navbar-end gap-3 font-para">
           <Link to={"/login"}>
             <button className="btn btn-sm bg-[#27DEC0] hover:bg-[#27DEC0]">
               Login

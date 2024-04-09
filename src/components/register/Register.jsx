@@ -5,10 +5,10 @@ import { FaRegEyeSlash } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 const Register = () => {
-  const [viewPass, setVewPass] = useState(false);
-  const [viewConfirmPass, setVewConfirmPass] = useState(false);
+  const [viewPass, setVewPass] = useState(true);
+  const [viewConfirmPass, setVewConfirmPass] = useState(true);
   return (
-    <div className="min-h-[80vh] bg-log-reg-bg bg-cover bg-center bg-no-repeat rounded-2xl my-6 flex items-center">
+    <div className="min-h-[80vh] bg-log-reg-bg bg-cover bg-center bg-no-repeat rounded-2xl my-6 flex items-center font-para">
       <div className=" flex items-center w-10/12 mx-auto">
         <form className="h-[65vh] w-full flex flex-col justify-center gap-4 p-6 backdrop-blur-sm bg-[#27dec04a] rounded-l-xl">
           <h1 className="font-bold text-4xl text-center">Register Now!</h1>

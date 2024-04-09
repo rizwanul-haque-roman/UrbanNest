@@ -1,7 +1,7 @@
 import brand from "/brandkit.png";
 const Footer = () => {
   return (
-    <div className="bg-base-200">
+    <div className="bg-base-200 font-para">
       <footer className="container mx-auto grid grid-cols-4 py-10 bg-base-200 text-base-content">
         <aside className="">
           <img className="w-1/2 pb-6" src={brand} alt="" />
@@ -13,10 +13,10 @@ const Footer = () => {
         </aside>
         <nav className="grid">
           <h6 className="footer-title">Services</h6>
-          <a className="link link-hover">Branding</a>
-          <a className="link link-hover">Design</a>
-          <a className="link link-hover">Marketing</a>
-          <a className="link link-hover">Advertisement</a>
+          <a className="link link-hover">Mortgage Lending</a>
+          <a className="link link-hover">Home Inspection</a>
+          <a className="link link-hover">Real Estate Development</a>
+          <a className="link link-hover">Buying & Selling Estates</a>
         </nav>
         <nav className="grid">
           <h6 className="footer-title">Company</h6>
