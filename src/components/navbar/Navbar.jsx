@@ -63,12 +63,16 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{links}</ul>
         </div>
         <div className="navbar-end gap-3">
-          <Link>
-            <button className="btn btn-sm">Login</button>
+          <Link to={"/login"}>
+            <button className="btn btn-sm bg-[#27DEC0] hover:bg-[#27DEC0]">
+              Login
+            </button>
           </Link>
           <p>Or</p>
-          <Link>
-            <button className="btn btn-sm">Register</button>
+          <Link to={"/register"}>
+            <button className="btn btn-sm bg-[#27DEC0] hover:bg-[#27DEC0]">
+              Register
+            </button>
           </Link>
         </div>
       </div>
