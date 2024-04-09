@@ -1,4 +1,5 @@
 import brand from "/brandkit.png";
+import footer from "../../assets/footer.jpg";
 const Footer = () => {
   return (
     <div className="bg-base-200 font-para">
@@ -32,6 +33,7 @@ const Footer = () => {
           <a className="link link-hover">Cookie policy</a>
         </nav>
       </footer>
+      <img src={footer} alt="" className="w-full" />
     </div>
   );
 };

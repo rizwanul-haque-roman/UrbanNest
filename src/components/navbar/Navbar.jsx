@@ -66,13 +66,13 @@ const Navbar = () => {
         </div>
         <div className="navbar-end gap-3 font-para">
           <Link to={"/login"}>
-            <button className="btn btn-sm bg-[#27DEC0] hover:bg-[#27DEC0]">
+            <button className="btn btn-sm bg-[#27DEC0] hover:bg-[#27DEC0] text-lg">
               Login
             </button>
           </Link>
           <p>Or</p>
           <Link to={"/register"}>
-            <button className="btn btn-sm bg-[#27DEC0] hover:bg-[#27DEC0]">
+            <button className="btn btn-sm bg-[#27DEC0] hover:bg-[#27DEC0] text-lg">
               Register
             </button>
           </Link>
