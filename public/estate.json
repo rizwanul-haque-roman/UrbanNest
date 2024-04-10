@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "segment": "Commercial",
+    "title": "Downtown Office Tower",
+    "description": "Modern office tower in the heart of downtown. High-speed elevators, stunning views, and state-of-the-art facilities.",
+    "price": "$10,000,000",
+    "status": "sale",
+    "area": "50,000 sq ft",
+    "location": "Downtown Business District",
+    "facilities": ["Conference Rooms", "High-speed Internet", "Parking Garage"],
+    "img": "https://i.ibb.co/KxM0vcm/id-01.jpg"
+  },
+  {
+    "id": 2,
+    "segment": "Commercial",
+    "title": "Retail Space",
+    "description": "Prime retail space with high foot traffic. Ideal for a boutique or specialty store.",
+    "price": "$5,000 / month",
+    "status": "rent",
+    "area": "2,500 sq ft",
+    "location": "Main Street",
+    "facilities": ["Storefront Windows", "Storage Area", "Security System"],
+    "img": "https://i.ibb.co/Px52v4s/id-02.jpg"
+  },
+  {
+    "id": 3,
+    "segment": "Commercial",
+    "title": "Distribution Center",
+    "description": "Spacious warehouse with loading docks and ample storage. Perfect for distribution and logistics.",
+    "price": "$2,000,000",
+    "status": "sale",
+    "area": "100,000 sq ft",
+    "location": "Industrial Park",
+    "facilities": ["Loading Docks", "High Ceilings", "Security Cameras"],
+    "img": "https://i.ibb.co/wSykM0R/id-03.jpg"
+  },
+  {
+    "id": 4,
+    "segment": "Commercial",
+    "title": "Manufacturing Space",
+    "description": "Versatile industrial facility with manufacturing space and offices. Close proximity to major highways.",
+    "price": "$8,000 / month",
+    "status": "rent",
+    "area": "10,000 sq ft",
+    "location": "Industrial Zone",
+    "facilities": ["Manufacturing Area", "Office Spaces", "Employee Breakroom"],
+    "img": "https://i.ibb.co/ZW8LJWy/id-04.jpg"
+  },
+  {
+    "id": 5,
+    "segment": "Commercial",
+    "title": "Restaurant Space",
+    "description": "Turnkey restaurant space with fully equipped kitchen and dining area. Excellent location for a new culinary venture.",
+    "price": "$200 / sq ft",
+    "status": "sale",
+    "area": "3,000 sq ft",
+    "location": "Downtown Dining District",
+    "facilities": ["Commercial Kitchen", "Outdoor Seating", "Bar Area"],
+    "img": "https://i.ibb.co/zn5PyQW/id-05.jpg"
+  },
+  {
+    "id": 6,
+    "segment": "Commercial",
+    "title": "Entertainment Venue",
+    "description": "Exciting entertainment venue with stage, seating, and sound system. Perfect for concerts, performances, and events.",
+    "price": "$15,000 / event",
+    "status": "rent",
+    "area": "5,000 sq ft",
+    "location": "Entertainment District",
+    "facilities": ["Stage", "Seating Area", "Lighting System"],
+    "img": "https://i.ibb.co/vZLfzsZ/id-06.jpg"
+  }
+]
