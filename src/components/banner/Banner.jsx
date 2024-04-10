@@ -25,12 +25,12 @@ const Banner = () => {
           delay: 2000,
         }}
         speed={2000}
-        className="mySwiper h-[75vh] my-12 rounded-3xl font-para"
+        className="mySwiper h-[75vh] my-12 rounded-3xl font-heading"
       >
         <SwiperSlide>
           <div className="relative">
-            <div className="flex justify-center items-center absolute top-0 right-0 h-[75vh] backdrop-blur-sm bg-[#27dec016] p-12">
-              <h1 className="text-5xl font-bold text-[#fbde77b3]">
+            <div className="flex justify-center items-center absolute top-0 right-0 h-[75vh] backdrop-blur-sm bg-[#ff671b25] p-12">
+              <h1 className="text-5xl font-bold text-[#ff671b]">
                 Find Your Dream <br /> Home Today!
               </h1>
             </div>
@@ -39,8 +39,8 @@ const Banner = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div className="relative">
-            <div className="flex justify-center items-center absolute top-0 right-0 h-[75vh] backdrop-blur-sm bg-[#27dec016] p-12">
-              <h1 className="text-5xl font-bold text-[#0b1c02ba]">
+            <div className="flex justify-center items-center absolute top-0 right-0 h-[75vh] backdrop-blur-sm bg-[#ff671b25] p-12">
+              <h1 className="text-5xl font-bold text-[#ff671b]">
                 Unlock the Door <br /> to Your Future Home
               </h1>
             </div>
@@ -49,8 +49,8 @@ const Banner = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div className="relative">
-            <div className="flex justify-center items-center absolute top-0 right-0 h-[75vh] backdrop-blur-sm bg-[#27dec016] p-12">
-              <h1 className="text-5xl font-bold text-[#27321ed8]">
+            <div className="flex justify-center items-center absolute top-0 right-0 h-[75vh] backdrop-blur-sm bg-[#ff671b25] p-12">
+              <h1 className="text-5xl font-bold text-[#ff671b]">
                 Where Every House <br /> Becomes a Home
               </h1>
             </div>
@@ -59,8 +59,8 @@ const Banner = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div className="relative">
-            <div className="flex justify-center items-center absolute top-0 right-0 h-[75vh] backdrop-blur-sm bg-[#27dec016] p-12">
-              <h1 className="text-5xl font-bold text-[#28310A]">
+            <div className="flex justify-center items-center absolute top-0 right-0 h-[75vh] backdrop-blur-sm bg-[#ff671b25] p-12">
+              <h1 className="text-5xl font-bold text-[#ff671b]">
                 Find Your Sanctuary <br /> in the Heart <br />
                 of the City
               </h1>
@@ -70,8 +70,8 @@ const Banner = () => {
         </SwiperSlide>
         <SwiperSlide>
           <div className="relative">
-            <div className="flex justify-center items-center absolute top-0 right-0 h-[75vh] backdrop-blur-sm bg-[#27dec016] p-12">
-              <h1 className="text-5xl font-bold text-[#28310A]">
+            <div className="flex justify-center items-center absolute top-0 right-0 h-[75vh] backdrop-blur-sm bg-[#ff671b25] p-12">
+              <h1 className="text-5xl font-bold text-[#ff671b]">
                 Building Dreams,
                 <br /> One Home at a Time
               </h1>

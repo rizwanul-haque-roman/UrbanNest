@@ -8,8 +8,10 @@ const Login = () => {
   return (
     <div className="min-h-[80vh] bg-log-reg-bg bg-cover bg-center bg-no-repeat rounded-2xl my-6 flex items-center font-para">
       <div className=" flex items-center w-10/12 mx-auto">
-        <form className="h-[65vh] w-full flex flex-col justify-center gap-4 p-6 backdrop-blur-sm bg-[#27dec04a] rounded-l-xl">
-          <h1 className="font-bold text-4xl text-center">Login Now!</h1>
+        <form className="h-[65vh] w-full flex flex-col justify-center gap-4 p-6 backdrop-blur-sm bg-[#ff671b25] rounded-l-xl">
+          <h1 className="font-bold font-heading text-white text-5xl text-center">
+            Login Now!
+          </h1>
           <label className="input flex items-center gap-2">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -45,13 +47,13 @@ const Login = () => {
               {viewPass ? <FaRegEye /> : <FaRegEyeSlash />}
             </a>
           </label>
-          <a href="#" className="text-white hover:underline">
+          <a href="#" className="text-white font-medium hover:underline">
             Forgot Password?
           </a>
-          <button className="btn bg-[#27DEC0] hover:bg-[#27DEC0] border-0 text-2xl">
+          <button className="btn bg-[#ff671b] hover:bg-[#ff671b] border-0 text-2xl text-white">
             Login
           </button>
-          <p className="text-white text-center">
+          <p className="text-white text-center font-medium">
             Not registered yet? Proceed to{" "}
             <Link className="underline" to={"/register"}>
               Register

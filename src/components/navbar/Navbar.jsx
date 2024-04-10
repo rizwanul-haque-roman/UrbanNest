@@ -6,7 +6,9 @@ const Navbar = () => {
       <li>
         <NavLink
           to="/"
-          className={({ isActive }) => (isActive ? "underline" : "")}
+          className={({ isActive }) =>
+            isActive ? "text-[#ff671b] underline" : ""
+          }
         >
           Home
         </NavLink>
@@ -14,7 +16,9 @@ const Navbar = () => {
       <li>
         <NavLink
           to="/contact"
-          className={({ isActive }) => (isActive ? "underline" : "")}
+          className={({ isActive }) =>
+            isActive ? "text-[#ff671b] underline" : ""
+          }
         >
           Contact
         </NavLink>
@@ -22,7 +26,9 @@ const Navbar = () => {
       <li>
         <NavLink
           to="/update-profile"
-          className={({ isActive }) => (isActive ? "underline" : "")}
+          className={({ isActive }) =>
+            isActive ? "text-[#ff671b] underline" : ""
+          }
         >
           Update Profile
         </NavLink>
@@ -66,13 +72,13 @@ const Navbar = () => {
         </div>
         <div className="navbar-end gap-3 font-para">
           <Link to={"/login"}>
-            <button className="btn btn-sm bg-[#27DEC0] hover:bg-[#27DEC0] text-lg">
+            <button className="btn btn-sm bg-[#ff671b] hover:bg-[#ff671bcb] text-lg">
               Login
             </button>
           </Link>
           <p>Or</p>
           <Link to={"/register"}>
-            <button className="btn btn-sm bg-[#27DEC0] hover:bg-[#27DEC0] text-lg">
+            <button className="btn btn-sm bg-[#ff671b] hover:bg-[#ff671bcb] text-lg">
               Register
             </button>
           </Link>

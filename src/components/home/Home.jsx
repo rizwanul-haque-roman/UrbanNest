@@ -1,13 +1,13 @@
 import Banner from "../banner/Banner";
 import Estates from "../estates/Estates";
+import Realtor from "../realtor/Realtor";
 
 const Home = () => {
   return (
     <div>
       <Banner />
-      <div className="font-para">
-        <Estates />
-      </div>
+      <Estates className="font-para" />
+      <Realtor />
     </div>
   );
 };

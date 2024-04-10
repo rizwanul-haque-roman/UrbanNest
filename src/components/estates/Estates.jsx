@@ -18,12 +18,13 @@ const Estates = () => {
   //   console.log(estates);
   return (
     <div>
-      <h1 className="text-4xl font-bold my-3 text-center">
-        Explore Our Diverse Commercial Real Estate Offerings
+      <h1 className="text-5xl font-heading font-bold my-24 text-center">
+        Explore Our Diverse{" "}
+        <span className="text-[#ff671b]">Commercial Real Estate</span> Offerings
       </h1>
       <div className="grid grid-cols-4 justify-center items-center gap-6">
         <div className="col-span-1">
-          <p className="text-lg">
+          <p className="text-xl font-medium font-para">
             Explore a diverse array of office buildings, retail spaces,
             warehouses, industrial facilities, restaurants, and entertainment
             venues. Each estate is meticulously selected to offer prime
@@ -44,7 +45,7 @@ const Estates = () => {
               delay: 2000,
             }}
             speed={2000}
-            className="mySwiper h-[75vh] my-12 rounded-3xl font-para"
+            className="mySwiper h-[75vh] my-12 rounded-lg font-para"
           >
             {estates.map((estate, idx) => (
               <SwiperSlide key={idx}>
