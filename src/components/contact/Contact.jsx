@@ -1,7 +1,9 @@
+import GetInTouch from "../getInTouch/GetInTouch";
+
 const Contact = () => {
   return (
     <div>
-      <h1>This is contact</h1>
+      <GetInTouch />
     </div>
   );
 };

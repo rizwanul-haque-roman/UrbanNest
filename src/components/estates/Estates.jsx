@@ -17,8 +17,8 @@ const Estates = () => {
 
   //   console.log(estates);
   return (
-    <div>
-      <h1 className="text-5xl font-heading font-bold my-24 text-center">
+    <div className="mt-24">
+      <h1 className="text-5xl font-heading font-bold text-center">
         Explore Our Diverse{" "}
         <span className="text-[#ff671b]">Commercial Real Estate</span> Offerings
       </h1>
