@@ -1,36 +1,64 @@
 import { useContext, useState } from "react";
 import { FaRegEye } from "react-icons/fa6";
 import { FaRegEyeSlash } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Auth/AuthProvider";
 import { FaGoogle, FaGithub } from "react-icons/fa";
+import Swal from "sweetalert2";
 
 const Login = () => {
+  const { loader } = useContext(AuthContext);
+  const [loginErr, setLoginErr] = useState("");
   const { loginUser, googleLogIn, gitHubLogIn } = useContext(AuthContext);
   const [viewPass, setVewPass] = useState(true);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const handleSubmit = (event) => {
+    setLoginErr("");
     event.preventDefault();
     const form = new FormData(event.currentTarget);
     const email = form.get("email");
     const pass = form.get("pass");
 
     loginUser(email, pass)
-      .then((result) => console.log(result.user))
-      .catch((error) => console.error(error));
+      .then((result) => {
+        console.log(result);
+        Swal.fire("Login Successful");
+        navigate(location?.state ? location.state : "/");
+      })
+      .catch((error) => Swal.fire(error.message));
   };
 
   const loginWithGoogle = () => {
     googleLogIn()
-      .then((result) => console.log(result.user))
-      .catch((error) => console.error(error));
+      .then((result) => {
+        console.log(result);
+        Swal.fire("Login Successful");
+        navigate(location?.state ? location.state : "/");
+      })
+      .catch((error) => Swal.fire(error.message));
   };
 
   const loginWithGitHub = () => {
     gitHubLogIn()
-      .then((result) => console.log(result.user))
-      .catch((error) => console.error(error));
+      .then((result) => {
+        console.log(result);
+        Swal.fire("Login Successful");
+        navigate(location?.state ? location.state : "/");
+      })
+      .catch((error) => Swal.fire(error.message));
   };
+
+  console.log(loginErr);
+
+  // if (loader) {
+  //   return (
+  //     <div className="flex justify-center items-center h-[70vh]">
+  //       <span className="loading loading-infinity loading-lg"></span>
+  //     </div>
+  //   );
+  // }
 
   return (
     <div className="min-h-[80vh] bg-log-reg-bg bg-cover bg-center bg-no-repeat rounded-2xl my-6 flex items-center font-para">
@@ -52,7 +80,7 @@ const Login = () => {
               <path d="M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z" />
               <path d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" />
             </svg>
-            <input type="email" name="email" placeholder="Email" />
+            <input type="email" name="email" placeholder="Email" required />
           </label>
           <label className="input flex items-center justify-between gap-2">
             <div className="flex items-center gap-2">
@@ -72,6 +100,7 @@ const Login = () => {
                 type={viewPass ? "password" : "text"}
                 name="pass"
                 placeholder="password"
+                required
               />
             </div>
             <a onClick={() => setVewPass(!viewPass)}>

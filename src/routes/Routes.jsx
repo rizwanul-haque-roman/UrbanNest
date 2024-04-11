@@ -5,6 +5,7 @@ import Login from "../components/login/Login";
 import Register from "../components/register/Register";
 import Contact from "../components/contact/Contact";
 import Details from "../components/details/Details";
+import Private from "../components/private/Private";
 
 const router = createBrowserRouter([
   {
@@ -29,7 +30,11 @@ const router = createBrowserRouter([
       },
       {
         path: "/details/:id",
-        element: <Details />,
+        element: (
+          <Private>
+            <Details />
+          </Private>
+        ),
         loader: () => fetch("/estate.json"),
       },
     ],

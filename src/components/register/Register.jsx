@@ -1,13 +1,17 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FaRegEye } from "react-icons/fa6";
 import { IoMdPhotos } from "react-icons/io";
 import { FaRegEyeSlash } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../Auth/AuthProvider";
+import Swal from "sweetalert2";
 
 const Register = () => {
   const [viewPass, setVewPass] = useState(true);
   const [viewConfirmPass, setVewConfirmPass] = useState(true);
+  const [verification, setVerification] = useState("");
+  const [regErr, setRegErr] = useState("");
+  const [success, setSuccess] = useState("");
   const { registerUser } = useContext(AuthContext);
 
   const handleSubmit = (event) => {
@@ -18,13 +22,34 @@ const Register = () => {
     const email = form.get("email");
     const pass = form.get("pass");
     const confirmPass = form.get("confirmPass");
+    setVerification("");
+    setRegErr("");
+    setSuccess("");
+
+    if (!/[A-Z]/.test(pass)) {
+      setVerification("Password must contain at least one uppercase letter");
+      return;
+    } else if (!/[a-z]/.test(pass)) {
+      setVerification("Password must contain at least one lowercase letter");
+      return;
+    } else if (pass.length < 6) {
+      setVerification("Password must contain at least 6 characters");
+      return;
+    } else if (pass !== confirmPass) {
+      setVerification("Password did not match with confirm password");
+      return;
+    }
 
     registerUser(email, pass)
-      .then((result) => console.log(result.user))
-      .catch((error) => console.error(error));
-
-    // console.log(name, url, email, pass, confirmPass);
+      .then((result) => setSuccess(result.user.email))
+      .catch((error) => setRegErr(error.message));
   };
+
+  useEffect(() => {
+    verification ? Swal.fire(verification) : "";
+    regErr ? Swal.fire(regErr) : "";
+    success ? Swal.fire("Registration Successful") : "";
+  }, [verification, regErr, success]);
 
   return (
     <div className="min-h-[80vh] bg-log-reg-bg bg-cover bg-center bg-no-repeat rounded-2xl my-6 flex items-center font-para">
