@@ -4,6 +4,7 @@ import { useContext } from "react";
 import { AuthContext } from "../Auth/AuthProvider";
 const Navbar = () => {
   const { user, logOut } = useContext(AuthContext);
+  // console.log(user.photoURL);
   const links = (
     <>
       <li>
@@ -75,8 +76,17 @@ const Navbar = () => {
         </div>
         <div className="navbar-end gap-3 font-para">
           {user ? (
-            <div className="flex gap-3">
-              <p>{user.email}</p>
+            <div className="flex items-center gap-3">
+              <div
+                className="w-10 rounded-full tooltip"
+                data-tip={user.displayName}
+              >
+                <img
+                  className="rounded-full tooltip"
+                  alt=""
+                  src={user.photoURL}
+                />
+              </div>
               <button
                 onClick={logOut}
                 className="btn btn-sm bg-[#ff671b] hover:bg-[#ff671bcb] text-lg"
