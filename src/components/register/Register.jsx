@@ -1,16 +1,38 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FaRegEye } from "react-icons/fa6";
 import { IoMdPhotos } from "react-icons/io";
 import { FaRegEyeSlash } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../Auth/AuthProvider";
 
 const Register = () => {
   const [viewPass, setVewPass] = useState(true);
   const [viewConfirmPass, setVewConfirmPass] = useState(true);
+  const { registerUser } = useContext(AuthContext);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const form = new FormData(event.currentTarget);
+    const name = form.get("name");
+    const url = form.get("url");
+    const email = form.get("email");
+    const pass = form.get("pass");
+    const confirmPass = form.get("confirmPass");
+
+    registerUser(email, pass)
+      .then((result) => console.log(result.user))
+      .catch((error) => console.error(error));
+
+    // console.log(name, url, email, pass, confirmPass);
+  };
+
   return (
     <div className="min-h-[80vh] bg-log-reg-bg bg-cover bg-center bg-no-repeat rounded-2xl my-6 flex items-center font-para">
       <div className=" flex items-center w-10/12 mx-auto">
-        <form className="h-[65vh] w-full flex flex-col justify-center gap-4 p-6 backdrop-blur-sm bg-[#ff671b25] rounded-l-xl">
+        <form
+          onSubmit={handleSubmit}
+          className="h-[65vh] w-full flex flex-col justify-center gap-4 p-6 backdrop-blur-sm bg-[#ff671b25] rounded-l-xl"
+        >
           <h1 className="font-bold text-5xl font-hading text-center text-white">
             Register Now!
           </h1>
@@ -23,11 +45,11 @@ const Register = () => {
             >
               <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM12.735 14c.618 0 1.093-.561.872-1.139a6.002 6.002 0 0 0-11.215 0c-.22.578.254 1.139.872 1.139h9.47Z" />
             </svg>
-            <input type="text" placeholder="Your Name" />
+            <input type="text" name="name" placeholder="Your Name" required />
           </label>
           <label className="input flex items-center gap-2">
             <IoMdPhotos />
-            <input type="url" placeholder="Photo URL" />
+            <input type="url" name="url" placeholder="Photo URL" required />
           </label>
           <label className="input flex items-center gap-2">
             <svg
@@ -39,7 +61,7 @@ const Register = () => {
               <path d="M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z" />
               <path d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" />
             </svg>
-            <input type="email" placeholder="Email" />
+            <input type="email" name="email" placeholder="Email" required />
           </label>
           <label className="input flex items-center justify-between gap-2">
             <div className="flex items-center gap-2">
@@ -57,7 +79,9 @@ const Register = () => {
               </svg>
               <input
                 type={viewPass ? "password" : "text"}
+                name="pass"
                 placeholder="password"
+                required
               />
             </div>
             <a onClick={() => setVewPass(!viewPass)}>
@@ -80,7 +104,9 @@ const Register = () => {
               </svg>
               <input
                 type={viewConfirmPass ? "password" : "text"}
+                name="confirmPass"
                 placeholder="Confirm password"
+                required
               />
             </div>
             <a onClick={() => setVewConfirmPass(!viewConfirmPass)}>
@@ -88,7 +114,7 @@ const Register = () => {
             </a>
           </label>
           <div className="flex gap-2 justify-start font-medium items-center">
-            <input type="checkbox" />
+            <input type="checkbox" name="check" required />
             <h3 className="text-white">Accept terms & conditions</h3>
           </div>
           <button className="btn bg-[#ff671b] hover:bg-[#ff671b] border-0 text-2xl text-white">

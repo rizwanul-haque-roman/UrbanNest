@@ -1,6 +1,9 @@
 import { Link, NavLink } from "react-router-dom";
 import brand from "/brandkit.png";
+import { useContext } from "react";
+import { AuthContext } from "../Auth/AuthProvider";
 const Navbar = () => {
+  const { user, logOut } = useContext(AuthContext);
   const links = (
     <>
       <li>
@@ -71,17 +74,31 @@ const Navbar = () => {
           </ul>
         </div>
         <div className="navbar-end gap-3 font-para">
-          <Link to={"/login"}>
-            <button className="btn btn-sm bg-[#ff671b] hover:bg-[#ff671bcb] text-lg">
-              Login
-            </button>
-          </Link>
-          <p>Or</p>
-          <Link to={"/register"}>
-            <button className="btn btn-sm bg-[#ff671b] hover:bg-[#ff671bcb] text-lg">
-              Register
-            </button>
-          </Link>
+          {user ? (
+            <div className="flex gap-3">
+              <p>{user.email}</p>
+              <button
+                onClick={logOut}
+                className="btn btn-sm bg-[#ff671b] hover:bg-[#ff671bcb] text-lg"
+              >
+                Log Out
+              </button>
+            </div>
+          ) : (
+            <div className="flex gap-3">
+              <Link to={"/login"}>
+                <button className="btn btn-sm bg-[#ff671b] hover:bg-[#ff671bcb] text-lg">
+                  Login
+                </button>
+              </Link>
+              <p>Or</p>
+              <Link to={"/register"}>
+                <button className="btn btn-sm bg-[#ff671b] hover:bg-[#ff671bcb] text-lg">
+                  Register
+                </button>
+              </Link>
+            </div>
+          )}
         </div>
       </div>
     </div>

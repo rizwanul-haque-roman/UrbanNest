@@ -1,14 +1,44 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FaRegEye } from "react-icons/fa6";
 import { FaRegEyeSlash } from "react-icons/fa6";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../Auth/AuthProvider";
+import { FaGoogle, FaGithub } from "react-icons/fa";
 
 const Login = () => {
+  const { loginUser, googleLogIn, gitHubLogIn } = useContext(AuthContext);
   const [viewPass, setVewPass] = useState(true);
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const form = new FormData(event.currentTarget);
+    const email = form.get("email");
+    const pass = form.get("pass");
+
+    loginUser(email, pass)
+      .then((result) => console.log(result.user))
+      .catch((error) => console.error(error));
+  };
+
+  const loginWithGoogle = () => {
+    googleLogIn()
+      .then((result) => console.log(result.user))
+      .catch((error) => console.error(error));
+  };
+
+  const loginWithGitHub = () => {
+    gitHubLogIn()
+      .then((result) => console.log(result.user))
+      .catch((error) => console.error(error));
+  };
+
   return (
     <div className="min-h-[80vh] bg-log-reg-bg bg-cover bg-center bg-no-repeat rounded-2xl my-6 flex items-center font-para">
       <div className=" flex items-center w-10/12 mx-auto">
-        <form className="h-[65vh] w-full flex flex-col justify-center gap-4 p-6 backdrop-blur-sm bg-[#ff671b25] rounded-l-xl">
+        <form
+          onSubmit={handleSubmit}
+          className="h-[65vh] w-full flex flex-col justify-center gap-4 p-6 backdrop-blur-sm bg-[#ff671b25] rounded-l-xl"
+        >
           <h1 className="font-bold font-heading text-white text-5xl text-center">
             Login Now!
           </h1>
@@ -22,7 +52,7 @@ const Login = () => {
               <path d="M2.5 3A1.5 1.5 0 0 0 1 4.5v.793c.026.009.051.02.076.032L7.674 8.51c.206.1.446.1.652 0l6.598-3.185A.755.755 0 0 1 15 5.293V4.5A1.5 1.5 0 0 0 13.5 3h-11Z" />
               <path d="M15 6.954 8.978 9.86a2.25 2.25 0 0 1-1.956 0L1 6.954V11.5A1.5 1.5 0 0 0 2.5 13h11a1.5 1.5 0 0 0 1.5-1.5V6.954Z" />
             </svg>
-            <input type="email" placeholder="Email" />
+            <input type="email" name="email" placeholder="Email" />
           </label>
           <label className="input flex items-center justify-between gap-2">
             <div className="flex items-center gap-2">
@@ -40,6 +70,7 @@ const Login = () => {
               </svg>
               <input
                 type={viewPass ? "password" : "text"}
+                name="pass"
                 placeholder="password"
               />
             </div>
@@ -59,6 +90,25 @@ const Login = () => {
               Register
             </Link>
           </p>
+          <div>
+            <div className="flex justify-center">
+              <p className="text-white font-para font-medium">Or Login With</p>
+            </div>
+            <div className="flex gap-6 text-3xl justify-center mt-7">
+              <div
+                onClick={loginWithGoogle}
+                className="bg-[#ff671b] px-3 py-2 rounded-2xl"
+              >
+                <FaGoogle />
+              </div>
+              <div
+                onClick={loginWithGitHub}
+                className="bg-[#ff671b] px-3 py-2 rounded-2xl"
+              >
+                <FaGithub />
+              </div>
+            </div>
+          </div>
         </form>
         <div className="h-[65vh] w-full bg-cover bg-center bg-no-repeat bg-log-reg-aside rounded-r-xl"></div>
       </div>
