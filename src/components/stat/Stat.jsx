@@ -3,14 +3,14 @@ const Stat = () => {
     <div className="text-center my-24">
       <div>
         <h3 className="text-5xl font-heading font-bold my-4">
-          See Our <span className="text-[#ff671b]">Current Standing</span> In
-          The Real Estate Business
+          What We <span className="text-[#ff671b]">Achieved</span> Through the
+          years
         </h3>
       </div>
       <div className="stats stats-vertical lg:stats-horizontal font-para">
         <div className="stat">
-          <div className="stat-title">Market Value</div>
-          <div className="stat-value text-[#ff671b]">$350 million</div>
+          <div className="stat-title">Net worth</div>
+          <div className="stat-value text-[#ff671b]">$3.5 Billion</div>
           <div className="stat-desc">↗︎ increased 22%</div>
         </div>
 

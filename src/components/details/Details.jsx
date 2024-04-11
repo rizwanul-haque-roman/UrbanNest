@@ -14,8 +14,8 @@ const Details = () => {
     setEstate(estate);
     setFacilities(estate.facilities);
   }, [id, estates]);
-  console.log(estates);
-  console.log("facilities: ", facilities);
+  // console.log("Data from auth:", data);
+  // console.log("facilities: ", facilities);
   return (
     <div className="font-para">
       <h2 className="text-black text-6xl font-bold pb-3 text-center font-heading">
