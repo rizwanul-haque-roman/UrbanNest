@@ -1,10 +1,17 @@
+import { useEffect } from "react";
 import Banner from "../banner/Banner";
 import Estates from "../estates/Estates";
 import Realtor from "../realtor/Realtor";
 import Stat from "../stat/Stat";
+import Aos from "aos";
+import "aos/dist/aos.css";
 import { Helmet } from "react-helmet";
 
 const Home = () => {
+  useEffect(() => {
+    Aos.init();
+  }, []);
+
   return (
     <div>
       <Helmet>

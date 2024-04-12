@@ -5,7 +5,7 @@ import { MdArrowOutward } from "react-icons/md";
 
 const Realtor = () => {
   return (
-    <div>
+    <div data-aos="zoom-in" data-aos-duration="1500">
       <div className="text-center mb-12">
         <h3 className="font-heading text-5xl font-bold my-4">
           Get Services from{" "}
@@ -18,7 +18,11 @@ const Realtor = () => {
         </p>
       </div>
       <div className="flex justify-between my-6">
-        <div className="text-center w-1/4 hover:border rounded-xl hover:shadow-lg p-6">
+        <div
+          className="text-center w-1/4 hover:border rounded-xl hover:shadow-lg p-6"
+          data-aos="flip-left"
+          data-aos-duration="1500"
+        >
           <img src={icon1} alt="" className="mx-auto" />
           <h4 className="font-heading text-2xl font-semibold">
             <span className="text-[#ff671b]">Buy</span> A Property
@@ -32,7 +36,11 @@ const Realtor = () => {
             <p>Buy Property</p>
           </div>
         </div>
-        <div className="text-center w-1/4 hover:border rounded-xl hover:shadow-lg p-6">
+        <div
+          className="text-center w-1/4 hover:border rounded-xl hover:shadow-lg p-6"
+          data-aos="flip-left"
+          data-aos-duration="1500"
+        >
           <img src={icon2} alt="" className="mx-auto" />
           <h4 className="font-heading text-2xl font-semibold">
             <span className="text-[#ff671b]">Find</span> A Property
@@ -46,7 +54,11 @@ const Realtor = () => {
             <p>Place an ad</p>
           </div>
         </div>
-        <div className="text-center w-1/4 hover:border rounded-xl hover:shadow-lg p-6">
+        <div
+          className="text-center w-1/4 hover:border rounded-xl hover:shadow-lg p-6"
+          data-aos="flip-left"
+          data-aos-duration="1500"
+        >
           <img src={icon3} alt="" className="mx-auto" />
           <h4 className="font-heading text-2xl font-semibold">
             <span className="text-[#ff671b]">Rent</span> A Property
