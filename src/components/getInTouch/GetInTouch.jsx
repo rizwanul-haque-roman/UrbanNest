@@ -5,8 +5,8 @@ const GetInTouch = () => {
   return (
     <div>
       <div>
-        <h1 className="text-5xl font-heading font-bold text-center">
-          Have any Inquary?
+        <h1 className="text-6xl leading-[70px] font-heading font-bold text-center">
+          Have any Inquiry?
           <br />
           <span className="text-[#ff671b]">Get in Touch</span> with us. You Will
           Hear From Us Soon
