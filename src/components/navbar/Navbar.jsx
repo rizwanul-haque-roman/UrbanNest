@@ -2,8 +2,9 @@ import { Link, NavLink } from "react-router-dom";
 import brand from "/brandkit.png";
 import { useContext } from "react";
 import { AuthContext } from "../Auth/AuthProvider";
+import profile from "../../assets/profile-circle.svg";
 const Navbar = () => {
-  const { user, logOut } = useContext(AuthContext);
+  const { user, logOut, loader } = useContext(AuthContext);
   // console.log(user.photoURL);
   const links = (
     <>
@@ -25,6 +26,16 @@ const Navbar = () => {
           }
         >
           Contact
+        </NavLink>
+      </li>
+      <li>
+        <NavLink
+          to="/faq"
+          className={({ isActive }) =>
+            isActive ? "text-[#ff671b] underline" : ""
+          }
+        >
+          FAQ
         </NavLink>
       </li>
       <li>
@@ -84,16 +95,18 @@ const Navbar = () => {
                 <img
                   className="rounded-full tooltip"
                   alt=""
-                  src={user.photoURL}
+                  src={user.photoURL ? user.photoURL : profile}
                 />
               </div>
               <button
                 onClick={logOut}
-                className="btn btn-sm bg-[#ff671b] hover:bg-[#ff671bcb] text-lg"
+                className="btn btn-sm text-white bg-[#ff671b] hover:bg-[#ff671bcb] text-lg"
               >
                 Log Out
               </button>
             </div>
+          ) : loader ? (
+            <span className="loading loading-infinity loading-lg"></span>
           ) : (
             <div className="flex gap-3">
               <Link to={"/login"}>

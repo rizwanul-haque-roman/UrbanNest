@@ -1,18 +1,23 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { FaRegEye } from "react-icons/fa6";
 import { IoMdPhotos } from "react-icons/io";
 import { FaRegEyeSlash } from "react-icons/fa6";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import { AuthContext } from "../Auth/AuthProvider";
+import { updateProfile } from "firebase/auth";
 import Swal from "sweetalert2";
+import { auth } from "../../firebase/firebase.config";
+import { Helmet } from "react-helmet";
 
 const Register = () => {
   const [viewPass, setVewPass] = useState(true);
   const [viewConfirmPass, setVewConfirmPass] = useState(true);
-  const [verification, setVerification] = useState("");
-  const [regErr, setRegErr] = useState("");
-  const [success, setSuccess] = useState("");
+  // const [name, setName] = useState("");
+  // const [url, setUrl] = useState("");
   const { registerUser } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const location = useLocation();
+  console.log("register: ", location);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -22,37 +27,52 @@ const Register = () => {
     const email = form.get("email");
     const pass = form.get("pass");
     const confirmPass = form.get("confirmPass");
-    setVerification("");
-    setRegErr("");
-    setSuccess("");
+
+    // setName(name);
+    // setUrl(url);
 
     if (!/[A-Z]/.test(pass)) {
-      setVerification("Password must contain at least one uppercase letter");
+      Swal.fire("Password must contain at least one uppercase letter");
       return;
     } else if (!/[a-z]/.test(pass)) {
-      setVerification("Password must contain at least one lowercase letter");
+      Swal.fire("Password must contain at least one lowercase letter");
       return;
     } else if (pass.length < 6) {
-      setVerification("Password must contain at least 6 characters");
+      Swal.fire("Password must contain at least 6 characters");
       return;
     } else if (pass !== confirmPass) {
-      setVerification("Password did not match with confirm password");
+      Swal.fire("Password did not match with confirm password");
       return;
     }
 
-    registerUser(email, pass)
-      .then((result) => setSuccess(result.user.email))
-      .catch((error) => setRegErr(error.message));
+    registerUser(email, pass, name, url)
+      .then((result) => {
+        console.log(result.user);
+        Swal.fire("Registration Successful");
+        updateProfile(auth.currentUser, {
+          displayName: name,
+          photoURL: url,
+        })
+          .then(() => {
+            console.log("Profile updated!");
+          })
+          .catch((error) => {
+            console.error(error);
+          });
+        console.log("after update: ", result.user);
+        navigate(location?.state ? location.state : "/");
+      })
+      .catch((error) => Swal.fire(error.message));
   };
-
-  useEffect(() => {
-    verification ? Swal.fire(verification) : "";
-    regErr ? Swal.fire(regErr) : "";
-    success ? Swal.fire("Registration Successful") : "";
-  }, [verification, regErr, success]);
 
   return (
     <div className="min-h-[80vh] bg-log-reg-bg bg-cover bg-center bg-no-repeat rounded-2xl my-6 flex items-center font-para">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/logo.png" />
+        <title>Urban Nest | register</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <div className=" flex items-center w-10/12 mx-auto">
         <form
           onSubmit={handleSubmit}
@@ -74,7 +94,7 @@ const Register = () => {
           </label>
           <label className="input flex items-center gap-2">
             <IoMdPhotos />
-            <input type="url" name="url" placeholder="Photo URL" required />
+            <input type="url" name="url" placeholder="Photo URL" />
           </label>
           <label className="input flex items-center gap-2">
             <svg

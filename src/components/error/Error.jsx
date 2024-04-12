@@ -2,12 +2,15 @@ import { Link } from "react-router-dom";
 import matalRobot from "../../assets/matal-robot.png";
 import Navbar from "../navbar/Navbar";
 import { TbSquareRoundedArrowLeft } from "react-icons/tb";
+import Footer from "../footer/Footer";
 
 const Error = () => {
   return (
-    <div className="container mx-auto">
-      <Navbar />
-      <div className="flex justify-between items-center">
+    <div>
+      <div className="container mx-auto">
+        <Navbar />
+      </div>
+      <div className="flex justify-between items-center container mx-auto my-24">
         <div>
           <h3 className="text-7xl text-center font-heading font-bold">
             Page not <span className="text-[#ff671b]">found</span>
@@ -25,6 +28,7 @@ const Error = () => {
           <img src={matalRobot} alt="" className="w-3/4 mx-auto" />
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

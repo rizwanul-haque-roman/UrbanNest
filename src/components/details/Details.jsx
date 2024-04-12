@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useLoaderData } from "react-router-dom";
+import { Helmet } from "react-helmet";
 
 const Details = () => {
   const { id } = useParams();
@@ -18,9 +19,15 @@ const Details = () => {
   // console.log("facilities: ", facilities);
   return (
     <div className="font-para">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/logo.png" />
+        <title>Urban Nest | Property Details</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <h2 className="text-black text-6xl font-bold pb-3 text-center font-heading">
-        <span className="text-[#ff671b]">{estate.title}</span> {estate.segment}{" "}
-        area <br />
+        <span className="text-[#ff671b]">{estate.title}</span> of{" "}
+        {estate.segment} segment <br />
         for <span className="text-[#ff671b]">{estate.status}</span>
       </h2>
       <div className="grid lg:grid-cols-2 container mx-auto w-11/12 lg:w-full gap-6 space-y-6 my-10">

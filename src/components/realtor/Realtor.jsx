@@ -43,7 +43,7 @@ const Realtor = () => {
           </p>
           <div className="text-xl font-para flex gap-2 justify-center items-center btn btn-outline text-[#ff671b] my-3">
             <MdArrowOutward />
-            <p>Place and ad</p>
+            <p>Place an ad</p>
           </div>
         </div>
         <div className="text-center w-1/4 hover:border rounded-xl hover:shadow-lg p-6">

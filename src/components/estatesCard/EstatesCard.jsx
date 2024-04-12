@@ -3,7 +3,6 @@ import { MdArrowOutward } from "react-icons/md";
 import { Link } from "react-router-dom";
 const EstatesCard = ({ estate }) => {
   const { img } = estate;
-  console.log(img);
   return (
     <div className="relative">
       <img src={img} alt="" className="rounded-lg" />

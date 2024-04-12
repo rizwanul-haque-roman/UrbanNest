@@ -5,15 +5,16 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Auth/AuthProvider";
 import { FaGoogle, FaGithub } from "react-icons/fa";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet";
 
 const Login = () => {
-  const { loader } = useContext(AuthContext);
   const [loginErr, setLoginErr] = useState("");
   const { loginUser, googleLogIn, gitHubLogIn } = useContext(AuthContext);
   const [viewPass, setVewPass] = useState(true);
   const location = useLocation();
   const navigate = useNavigate();
 
+  console.log(location);
   const handleSubmit = (event) => {
     setLoginErr("");
     event.preventDefault();
@@ -52,16 +53,14 @@ const Login = () => {
 
   console.log(loginErr);
 
-  // if (loader) {
-  //   return (
-  //     <div className="flex justify-center items-center h-[70vh]">
-  //       <span className="loading loading-infinity loading-lg"></span>
-  //     </div>
-  //   );
-  // }
-
   return (
     <div className="min-h-[80vh] bg-log-reg-bg bg-cover bg-center bg-no-repeat rounded-2xl my-6 flex items-center font-para">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <link rel="icon" type="image/svg+xml" href="/logo.png" />
+        <title>Urban Nest | Login</title>
+        <link rel="canonical" href="http://mysite.com/example" />
+      </Helmet>
       <div className=" flex items-center w-10/12 mx-auto">
         <form
           onSubmit={handleSubmit}
@@ -115,7 +114,7 @@ const Login = () => {
           </button>
           <p className="text-white text-center font-medium">
             Not registered yet? Proceed to{" "}
-            <Link className="underline" to={"/register"}>
+            <Link state={location.state} className="underline" to={"/register"}>
               Register
             </Link>
           </p>

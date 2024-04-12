@@ -7,6 +7,8 @@ import Contact from "../components/contact/Contact";
 import Details from "../components/details/Details";
 import Private from "../components/private/Private";
 import Error from "../components/error/Error";
+import Update from "../components/update/Update";
+import Faq from "../components/faq/Faq";
 
 const router = createBrowserRouter([
   {
@@ -38,6 +40,22 @@ const router = createBrowserRouter([
           </Private>
         ),
         loader: () => fetch("/estate.json"),
+      },
+      {
+        path: "/update-profile",
+        element: (
+          <Private>
+            <Update />
+          </Private>
+        ),
+      },
+      {
+        path: "/faq",
+        element: (
+          <Private>
+            <Faq />
+          </Private>
+        ),
       },
     ],
   },

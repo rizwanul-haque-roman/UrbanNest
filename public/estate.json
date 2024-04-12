@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "segment": "Commercial",
+    "segment": "commercial",
     "title": "Downtown Office Tower",
     "description": "Our modern office tower, a jewel in the heart of downtown, puts your business at the center of the action.  Soar above the city with stunning panoramic views and enjoy state-of-the-art facilities designed for peak productivity.  High-speed elevators, advanced HVAC, and robust internet keep you connected and comfortable.  Experience the future of work in a dynamic environment that inspires collaboration and success.",
     "price": "$10,000,000",
@@ -13,7 +13,7 @@
   },
   {
     "id": 2,
-    "segment": "Commercial",
+    "segment": "business",
     "title": "Retail Space",
     "description": "The possibilities are endless in our versatile retail space. With its modern design and ample storefront windows, your boutique can create a captivating atmosphere that draws customers in. Design a space that reflects your brand's personality and showcase your products in a way that entices and inspires.  Enjoy the benefits of high foot traffic and transform your retail dreams into reality!",
     "price": "$5,000 / month",
@@ -25,7 +25,7 @@
   },
   {
     "id": 3,
-    "segment": "Commercial",
+    "segment": "warehouse",
     "title": "Distribution Center",
     "description": "Maximize your efficiency with our strategically designed features. Multiple loading docks allow for seamless loading and unloading of goods, minimizing turnaround times and keeping your supply chain running smoothly. The expansive storage area provides exceptional organization opportunities, ensuring your inventory is readily accessible and effortlessly managed.  Our warehouse is your key to optimizing your distribution process and achieving peak operational efficiency.",
     "price": "$2,000,000",
@@ -37,7 +37,7 @@
   },
   {
     "id": 4,
-    "segment": "Commercial",
+    "segment": "industry",
     "title": "Manufacturing Space",
     "description": "This multi-faceted facility provides a unique advantage for businesses seeking a comprehensive industrial solution.  Whether you're a growing manufacturer, a well-established logistics company, or a business seeking a space to consolidate operations, this versatile facility can adapt to your specific needs. Contact us today to explore the possibilities and unlock your industrial potential!",
     "price": "$8,000 / month",
@@ -49,19 +49,19 @@
   },
   {
     "id": 5,
-    "segment": "Commercial",
+    "segment": "restaurant",
     "title": "Restaurant Space",
     "description": "This exceptional location positions your restaurant for success.  High foot traffic guarantees excellent visibility, while convenient access draws in both local residents and curious passersby.  Surrounded by complementary businesses, you'll benefit from a built-in customer base eager to explore your culinary offerings.",
     "price": "$200 / sq-ft",
     "status": "sale",
     "area": "3,000 sq-ft",
     "location": "House No. 22, Road No. 46, Gulshan 2, Dhaka-1212, Bangladesh",
-    "facilities": ["Commercial Kitchen", "Outdoor Seating", "Bar Area"],
+    "facilities": ["Kitchen", "Outdoor Seating", "Bar Area"],
     "img": "https://i.ibb.co/zn5PyQW/id-05.jpg"
   },
   {
     "id": 6,
-    "segment": "Commercial",
+    "segment": "event",
     "title": "Entertainment Venue",
     "description": "Our carefully configured seating area maximizes comfort and creates an electric atmosphere. Tiered seating ensures optimal sightlines for every guest, allowing them to fully engage with the performance. Whether you're hosting an intimate gathering or a full-blown concert, our seating arrangements offer flexibility to cater to any event size.",
     "price": "$15,000 / event",
