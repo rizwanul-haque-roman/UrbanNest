@@ -93,7 +93,7 @@ const Navbar = () => {
                 data-tip={user.displayName}
               >
                 <img
-                  className="rounded-full tooltip"
+                  className="rounded-full tooltip w-14 h-10"
                   alt=""
                   src={user.photoURL ? user.photoURL : profile}
                 />

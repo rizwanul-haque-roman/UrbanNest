@@ -12,8 +12,6 @@ import { Helmet } from "react-helmet";
 const Register = () => {
   const [viewPass, setVewPass] = useState(true);
   const [viewConfirmPass, setVewConfirmPass] = useState(true);
-  // const [name, setName] = useState("");
-  // const [url, setUrl] = useState("");
   const { registerUser } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
@@ -27,9 +25,6 @@ const Register = () => {
     const email = form.get("email");
     const pass = form.get("pass");
     const confirmPass = form.get("confirmPass");
-
-    // setName(name);
-    // setUrl(url);
 
     if (!/[A-Z]/.test(pass)) {
       Swal.fire("Password must contain at least one uppercase letter");
@@ -59,7 +54,6 @@ const Register = () => {
           .catch((error) => {
             console.error(error);
           });
-        console.log("after update: ", result.user);
         navigate(location?.state ? location.state : "/");
       })
       .catch((error) => Swal.fire(error.message));

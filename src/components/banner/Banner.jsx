@@ -34,7 +34,7 @@ const Banner = () => {
                 Find Your Dream <br /> Home Today!
               </h1>
             </div>
-            <img src={slide1} alt="" />
+            <img src={slide1} alt="" className="w-full" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
@@ -44,7 +44,7 @@ const Banner = () => {
                 Unlock the Door <br /> to Your Future Home
               </h1>
             </div>
-            <img src={slide2} alt="" />
+            <img src={slide2} alt="" className="w-full" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
@@ -54,7 +54,7 @@ const Banner = () => {
                 Where Every House <br /> Becomes a Home
               </h1>
             </div>
-            <img src={slide3} alt="" />
+            <img src={slide3} alt="" className="w-full" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
@@ -65,7 +65,7 @@ const Banner = () => {
                 of the City
               </h1>
             </div>
-            <img src={slide4} alt="" />
+            <img src={slide4} alt="" className="w-full" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
@@ -76,7 +76,7 @@ const Banner = () => {
                 <br /> One Home at a Time
               </h1>
             </div>
-            <img src={slide5} alt="" />
+            <img src={slide5} alt="" className="w-full" />
           </div>
         </SwiperSlide>
       </Swiper>
