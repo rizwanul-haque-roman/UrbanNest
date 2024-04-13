@@ -8,7 +8,7 @@ import Details from "../components/details/Details";
 import Private from "../components/private/Private";
 import Error from "../components/error/Error";
 import Update from "../components/update/Update";
-import Faq from "../components/faq/Faq";
+import Inquiry from "../components/inquiry/Inquiry";
 
 const router = createBrowserRouter([
   {
@@ -50,10 +50,10 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "/faq",
+        path: "/inquiry",
         element: (
           <Private>
-            <Faq />
+            <Inquiry />
           </Private>
         ),
       },

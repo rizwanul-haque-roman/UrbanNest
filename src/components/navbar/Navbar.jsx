@@ -30,12 +30,12 @@ const Navbar = () => {
       </li>
       <li>
         <NavLink
-          to="/faq"
+          to="/inquiry"
           className={({ isActive }) =>
             isActive ? "text-[#ff671b] underline" : ""
           }
         >
-          FAQ
+          Inquiry
         </NavLink>
       </li>
       <li>
