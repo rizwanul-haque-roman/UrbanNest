@@ -1,17 +1,33 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useState } from "react";
 import { Helmet } from "react-helmet";
 import { AuthContext } from "../Auth/AuthProvider";
 import profile from "../../assets/profile-circle.svg";
+import { auth } from "../../firebase/firebase.config";
+import { updateProfile } from "firebase/auth";
+import Swal from "sweetalert2";
 
 const Update = () => {
-  const { user, updateUser } = useContext(AuthContext);
+  const { user, setReload } = useContext(AuthContext);
   const [name, setName] = useState(user.displayName);
   const [url, setUrl] = useState(user.photoURL);
 
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(name, url);
-    updateUser(name, url);
+
+    setReload(false);
+    updateProfile(auth.currentUser, {
+      displayName: name,
+      photoURL: url,
+    })
+      .then(() => {
+        Swal.fire("Changes saved successfully");
+        setReload(true);
+      })
+      .catch((error) => {
+        console.error(error.message);
+        Swal.fire(error.message);
+      });
   };
 
   const handleName = (event) => {

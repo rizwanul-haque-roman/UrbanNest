@@ -1,6 +1,5 @@
 import { createContext, useEffect, useState } from "react";
 import PropTypes from "prop-types";
-import Swal from "sweetalert2";
 import {
   createUserWithEmailAndPassword,
   onAuthStateChanged,
@@ -9,7 +8,6 @@ import {
   GoogleAuthProvider,
   GithubAuthProvider,
   signInWithPopup,
-  updateProfile,
 } from "firebase/auth";
 import { auth } from "../../firebase/firebase.config";
 
@@ -18,6 +16,7 @@ export const AuthContext = createContext(null);
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loader, setLoader] = useState(true);
+  const [reload, setReload] = useState(false);
 
   const googleProvider = new GoogleAuthProvider();
 
@@ -48,20 +47,6 @@ const AuthProvider = ({ children }) => {
     return signOut(auth);
   };
 
-  const updateUser = (name, photoUrl) => {
-    updateProfile(auth.currentUser, {
-      displayName: name,
-      photoURL: photoUrl,
-    })
-      .then(() => {
-        Swal.fire("Changes saved successfully");
-      })
-      .catch((error) => {
-        console.error(error.message);
-        Swal.fire(error.message);
-      });
-  };
-
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
@@ -69,7 +54,7 @@ const AuthProvider = ({ children }) => {
     });
 
     return () => unsubscribe();
-  }, []);
+  }, [reload]);
 
   const authInfo = {
     registerUser,
@@ -79,7 +64,7 @@ const AuthProvider = ({ children }) => {
     googleLogIn,
     gitHubLogIn,
     loader,
-    updateUser,
+    setReload,
   };
 
   return (

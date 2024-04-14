@@ -12,7 +12,7 @@ import { Helmet } from "react-helmet";
 const Register = () => {
   const [viewPass, setVewPass] = useState(true);
   const [viewConfirmPass, setVewConfirmPass] = useState(true);
-  const { registerUser } = useContext(AuthContext);
+  const { registerUser, setReload } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
   console.log("register: ", location);
@@ -50,6 +50,7 @@ const Register = () => {
         })
           .then(() => {
             console.log("Profile updated!");
+            setReload(true);
           })
           .catch((error) => {
             console.error(error);
