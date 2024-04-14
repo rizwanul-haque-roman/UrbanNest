@@ -88,15 +88,12 @@ const Navbar = () => {
         <div className="navbar-end gap-3 font-para">
           {user ? (
             <div className="flex items-center gap-3">
-              <div
-                className="w-10 rounded-full tooltip"
-                data-tip={user.displayName}
-              >
-                <img
-                  className="rounded-full tooltip w-14 h-10"
-                  alt=""
-                  src={user.photoURL ? user.photoURL : profile}
-                />
+              <div className="tooltip" data-tip={user.displayName}>
+                <div className="avatar w-10 border border-[#ff671b] p-1 rounded-full ">
+                  <div className="w-full rounded-full mx-auto">
+                    <img src={user.photoURL ? user.photoURL : profile} />
+                  </div>
+                </div>
               </div>
               <button
                 onClick={logOut}
