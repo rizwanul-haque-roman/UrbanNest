@@ -22,7 +22,7 @@ const EstatesCard = ({ estate }) => {
             <h3 className="text-2xl font-medium my-3 text-black">
               {estate.title}
             </h3>
-            <p>{estate.location}</p>
+            <p>Segment: {estate.segment}</p>
           </div>
           <Link to={`/details/${estate.id}`}>
             <div className="text-white text-xl font-semibold border-none flex gap-2 justify-center items-center btn bg-[#ff671b] hover:bg-[#ff671bcb]">

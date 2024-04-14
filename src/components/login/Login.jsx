@@ -54,7 +54,7 @@ const Login = () => {
   console.log(loginErr);
 
   return (
-    <div className="min-h-[80vh] bg-log-reg-bg bg-cover bg-center bg-no-repeat rounded-2xl my-6 flex items-center font-para">
+    <div className="w-11/12 lg:container mx-auto min-h-[80vh] bg-log-reg-bg bg-cover bg-center bg-no-repeat rounded-2xl my-6 flex items-center font-para">
       <Helmet>
         <meta charSet="utf-8" />
         <link rel="icon" type="image/svg+xml" href="/logo.png" />
@@ -64,7 +64,7 @@ const Login = () => {
       <div className=" flex items-center w-10/12 mx-auto">
         <form
           onSubmit={handleSubmit}
-          className="h-[65vh] w-full flex flex-col justify-center gap-4 p-6 backdrop-blur-sm bg-[#ff671b25] rounded-l-xl"
+          className="h-[65vh] w-full flex flex-col justify-center gap-4 p-6 backdrop-blur-sm bg-[#ff671b25] rounded-xl lg:rounded-l-xl"
         >
           <h1 className="font-bold font-heading text-white text-5xl text-center">
             Login Now!
@@ -138,7 +138,7 @@ const Login = () => {
             </div>
           </div>
         </form>
-        <div className="h-[65vh] w-full bg-cover bg-center bg-no-repeat bg-log-reg-aside rounded-r-xl"></div>
+        <div className="hidden lg:display-block h-[65vh] w-full bg-cover bg-center bg-no-repeat bg-log-reg-aside rounded-r-xl"></div>
       </div>
     </div>
   );

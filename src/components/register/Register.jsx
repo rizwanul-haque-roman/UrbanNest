@@ -61,7 +61,7 @@ const Register = () => {
   };
 
   return (
-    <div className="min-h-[80vh] bg-log-reg-bg bg-cover bg-center bg-no-repeat rounded-2xl my-6 flex items-center font-para">
+    <div className="w-11/12 lg:container mx-auto min-h-[80vh] bg-log-reg-bg bg-cover bg-center bg-no-repeat rounded-2xl my-6 flex items-center font-para">
       <Helmet>
         <meta charSet="utf-8" />
         <link rel="icon" type="image/svg+xml" href="/logo.png" />
@@ -167,7 +167,7 @@ const Register = () => {
             </Link>
           </p>
         </form>
-        <div className="h-[65vh] w-full bg-cover bg-center bg-no-repeat bg-log-reg-aside rounded-r-xl"></div>
+        <div className="hidden lg:display-block h-[65vh] w-full bg-cover bg-center bg-no-repeat bg-log-reg-aside rounded-r-xl"></div>
       </div>
     </div>
   );

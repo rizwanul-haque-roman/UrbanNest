@@ -32,7 +32,7 @@ const Estates = () => {
         </p>
       </div>
       <div
-        className="grid lg:grid-cols-3 justify-center items-center gap-6"
+        className="grid md:grid-cols-2 lg:grid-cols-3 justify-center items-center gap-6"
         data-aos="fade-up"
         data-aos-duration="1500"
       >
