@@ -1,19 +1,13 @@
-import Aos from "aos";
-import "aos/dist/aos.css";
 import icon1 from "../../assets/icon1.svg";
 import icon2 from "../../assets/icon2.svg";
 import icon3 from "../../assets/icon3.svg";
 import { MdArrowOutward } from "react-icons/md";
-import { useEffect } from "react";
 
 const Realtor = () => {
-  useEffect(() => {
-    Aos.init();
-  }, []);
   return (
     <div
       className="w-11/12 lg:container mx-auto"
-      data-aos="fade-up"
+      data-aos="zoom-in"
       data-aos-duration="1500"
     >
       <div className="text-center mb-12">

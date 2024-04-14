@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const EstatesCard = ({ estate }) => {
   const { img } = estate;
   return (
-    <div className="font-para">
+    <div className="font-para" data-aos="zoom-in" data-aos-duration="1500">
       <div className="card w-auto glass">
         <figure>
           <img src={img} alt="car!" />

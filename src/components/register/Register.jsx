@@ -167,7 +167,7 @@ const Register = () => {
             </Link>
           </p>
         </form>
-        <div className="hidden lg:display-block h-[65vh] w-full bg-cover bg-center bg-no-repeat bg-log-reg-aside rounded-r-xl"></div>
+        <div className="hidden lg:block h-[65vh] w-full bg-cover bg-center bg-no-repeat bg-log-reg-aside rounded-r-xl"></div>
       </div>
     </div>
   );
