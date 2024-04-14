@@ -5,7 +5,6 @@ import { AuthContext } from "../Auth/AuthProvider";
 import profile from "../../assets/profile-circle.svg";
 const Navbar = () => {
   const { user, logOut, loader } = useContext(AuthContext);
-  // console.log(user.photoURL);
   const links = (
     <>
       <li>
@@ -73,12 +72,12 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 font-para text-xl font-semibold"
+              className="menu menu-sm dropdown-content mt-3 p-2 shadow bg-base-100 rounded-box w-52 font-para text-xl font-semibold z-10"
             >
               {links}
             </ul>
           </div>
-          <img className="w-1/5" src={brand} alt="" />
+          <img className="w-1/4 lg:w-1/5" src={brand} alt="" />
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 font-para text-xl font-semibold">

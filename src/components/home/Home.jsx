@@ -20,7 +20,7 @@ const Home = () => {
         <title>Urban Nest | Home</title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
-      <Banner />
+      <Banner className=" -z-10" />
       <Estates className="font-para" />
       <Realtor />
       <Stat />

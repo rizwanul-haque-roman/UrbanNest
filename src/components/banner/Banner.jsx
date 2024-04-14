@@ -1,8 +1,3 @@
-import slide1 from "../../assets/slides/slide1.webp";
-import slide2 from "../../assets/slides/slide2.webp";
-import slide3 from "../../assets/slides/slide3.webp";
-import slide4 from "../../assets/slides/slide4.webp";
-import slide5 from "../../assets/slides/slide5.webp";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -11,7 +6,7 @@ import { Pagination, Navigation, Autoplay } from "swiper/modules";
 
 const Banner = () => {
   return (
-    <div>
+    <div className="w-11/12 lg:container mx-auto">
       <Swiper
         slidesPerView={1}
         spaceBetween={30}
@@ -22,61 +17,74 @@ const Banner = () => {
         navigation={true}
         modules={[Pagination, Navigation, Autoplay]}
         autoplay={{
-          delay: 2000,
+          delay: 3000,
         }}
-        speed={2000}
-        className="mySwiper h-[75vh] my-12 rounded-3xl font-heading"
+        speed={1800}
+        className="mySwiper h-[75vh] my-6 lg:my-12 rounded-3xl font-heading"
       >
         <SwiperSlide>
-          <div className="relative">
-            <div className="flex justify-center items-center absolute top-0 right-0 h-[75vh] backdrop-blur-sm bg-[#ff671b25] p-12">
-              <h1 className="text-5xl font-bold text-[#ff671b]">
-                Find Your Dream <br /> Home Today!
+          <div className="flex lg:justify-end items-end lg:items-center h-[75vh] bg-slide-1 bg-center bg-cover bg-no-repeat p-12">
+            <div className="lg:w-1/2 text-center p-4 lg:p-10 rounded-xl backdrop-blur-lg bg-[#ff671b7b]">
+              <h1 className="text-2xl lg:text-4xl font-bold text-black">
+                Elevate Your Business Presence in State-of-the-Art Office Spaces
+                Tailored for Success
               </h1>
+              <button className="btn bg-[#ff671b] hover:bg-[#de5009] border-none  text-white lg:text-xl mt-3 lg:mt-6">
+                Explore Our estates
+              </button>
             </div>
-            <img src={slide1} alt="" className="w-full" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="relative">
-            <div className="flex justify-center items-center absolute top-0 right-0 h-[75vh] backdrop-blur-sm bg-[#ff671b25] p-12">
-              <h1 className="text-5xl font-bold text-[#ff671b]">
-                Unlock the Door <br /> to Your Future Home
+          <div className="flex lg:justify-end items-end lg:items-center h-[75vh] bg-slide-2 bg-center bg-cover bg-no-repeat p-12">
+            <div className="lg:w-1/2 text-center p-4 lg:p-10 rounded-xl backdrop-blur-lg bg-[#ff671b7b]">
+              <h1 className="text-2xl lg:text-4xl font-bold text-black">
+                Discover Vibrant Retail Spaces Designed to Showcase Your
+                Products and Captivate Your Customers
               </h1>
+              <button className="btn bg-[#ff671b] hover:bg-[#de5009] border-none  text-white text-xl mt-6">
+                Explore Our estates
+              </button>
             </div>
-            <img src={slide2} alt="" className="w-full" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="relative">
-            <div className="flex justify-center items-center absolute top-0 right-0 h-[75vh] backdrop-blur-sm bg-[#ff671b25] p-12">
-              <h1 className="text-5xl font-bold text-[#ff671b]">
-                Where Every House <br /> Becomes a Home
+          <div className="flex lg:justify-end items-end lg:items-center h-[75vh] bg-slide-3 bg-center bg-cover bg-no-repeat p-12">
+            <div className="lg:w-1/2 text-center p-4 lg:p-10 rounded-xl backdrop-blur-lg bg-[#ff671b7b]">
+              <h1 className="text-2xl lg:text-4xl font-bold text-black">
+                Efficient Warehousing Solutions to Streamline Operations and
+                Optimize Storage for Your Business
               </h1>
+              <button className="btn bg-[#ff671b] hover:bg-[#de5009] border-none  text-white text-xl mt-6">
+                Explore Our estates
+              </button>
             </div>
-            <img src={slide3} alt="" className="w-full" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="relative">
-            <div className="flex justify-center items-center absolute top-0 right-0 h-[75vh] backdrop-blur-sm bg-[#ff671b25] p-12">
-              <h1 className="text-5xl font-bold text-[#ff671b]">
-                Find Your Sanctuary <br /> in the Heart <br />
-                of the City
+          <div className="flex lg:justify-end items-end lg:items-center h-[75vh] bg-slide-4 bg-center bg-cover bg-no-repeat p-12">
+            <div className="lg:w-1/2 text-center p-4 lg:p-10 rounded-xl backdrop-blur-lg bg-[#ff671b7b]">
+              <h1 className="text-2xl lg:text-4xl font-bold text-black">
+                Empower Your Industrial Operations with Cutting-Edge Facilities
+                Built for Innovation and Growth
               </h1>
+              <button className="btn bg-[#ff671b] hover:bg-[#de5009] border-none  text-white text-xl mt-6">
+                Explore Our estates
+              </button>
             </div>
-            <img src={slide4} alt="" className="w-full" />
           </div>
         </SwiperSlide>
         <SwiperSlide>
-          <div className="relative">
-            <div className="flex justify-center items-center absolute top-0 right-0 h-[75vh] backdrop-blur-sm bg-[#ff671b25] p-12">
-              <h1 className="text-5xl font-bold text-[#ff671b]">
-                Building Dreams,
-                <br /> One Home at a Time
+          <div className="flex lg:justify-end items-end lg:items-center h-[75vh] bg-slide-5 bg-center bg-cover bg-no-repeat p-12">
+            <div className="lg:w-1/2 text-center p-4 lg:p-10 rounded-xl backdrop-blur-lg bg-[#ff671b7b]">
+              <h1 className="text-2xl lg:text-4xl font-bold text-black">
+                Savor Unforgettable Dining Experiences in Our Diverse and
+                Flavorful Restaurant Spaces
               </h1>
+              <button className="btn bg-[#ff671b] hover:bg-[#de5009] border-none  text-white text-xl mt-6">
+                Explore Our estates
+              </button>
             </div>
-            <img src={slide5} alt="" className="w-full" />
           </div>
         </SwiperSlide>
       </Swiper>

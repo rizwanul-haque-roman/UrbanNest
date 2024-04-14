@@ -11,14 +11,14 @@ const Inquiry = () => {
   }, []);
 
   return (
-    <div className="container mx-auto mb-12">
+    <div className="w-11/12 lg:container mx-auto mb-12">
       <Helmet>
         <meta charSet="utf-8" />
         <link rel="icon" type="image/svg+xml" href="/logo.png" />
         <title>Urban Nest | Inquiry</title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
-      <div className="flex gap-6 items-center">
+      <div className="flex flex-col lg:flex-row gap-6 items-center">
         <div data-aos="fade-up" data-aos-duration="1500">
           <h2 className="font-heading text-5xl font-bold my-8">
             Real Estate <span className="text-[#ff671b]">inquiry</span> form
@@ -30,27 +30,27 @@ const Inquiry = () => {
           </p>
           <form
             action=""
-            className="p-6 border border-[#ff671b] rounded-xl my-6 mr-10 font-para"
+            className="w-full p-6 border border-[#ff671b] rounded-xl my-6 mr-10 font-para"
           >
-            <div className="flex justify-between">
-              <label className="form-control w-full max-w-xs">
+            <div className="flex justify-between gap-6">
+              <label className="form-control w-full ">
                 <div className="label">
                   <span className="label-text">First name</span>
                 </div>
                 <input
                   type="text"
                   placeholder="Type here"
-                  className="input input-bordered w-full max-w-xs"
+                  className="input input-bordered w-full "
                 />
               </label>
-              <label className="form-control w-full max-w-xs">
+              <label className="form-control w-full ">
                 <div className="label">
                   <span className="label-text">Last name</span>
                 </div>
                 <input
                   type="text"
                   placeholder="Type here"
-                  className="input input-bordered w-full max-w-xs"
+                  className="input input-bordered w-full "
                 />
               </label>
             </div>
@@ -66,25 +66,25 @@ const Inquiry = () => {
                 className="input input-bordered w-full"
               />
             </label>
-            <div className="flex justify-between">
-              <label className="form-control w-full max-w-xs">
+            <div className="flex justify-between gap-6">
+              <label className="form-control w-full ">
                 <div className="label">
                   <span className="label-text">Maximum Price</span>
                 </div>
                 <input
                   type="number"
                   placeholder="$"
-                  className="input input-bordered w-full max-w-xs"
+                  className="input input-bordered w-full "
                 />
               </label>
-              <label className="form-control w-full max-w-xs">
+              <label className="form-control w-full ">
                 <div className="label">
                   <span className="label-text">Minimum size</span>
                 </div>
                 <input
                   type="number"
                   placeholder="sq-ft"
-                  className="input input-bordered w-full max-w-xs"
+                  className="input input-bordered w-full "
                 />
               </label>
             </div>
@@ -118,8 +118,12 @@ const Inquiry = () => {
         Let&apos;s clear some <span className="text-[#ff671b]">doubts</span>{" "}
         before you <br /> Buy, Sell or Rent
       </h1>
-      <div className="flex">
-        <div className="w-1/2" data-aos="fade-right" data-aos-duration="1500">
+      <div className="flex flex-col lg:flex-row">
+        <div
+          className="lg:w-1/2"
+          data-aos="fade-right"
+          data-aos-duration="1500"
+        >
           <img src={faq} alt="" />
         </div>
         <div

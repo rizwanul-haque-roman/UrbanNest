@@ -6,12 +6,12 @@ const Stat = () => {
   const [counter, setCounter] = useState(false);
   return (
     <div
-      className="text-center my-24"
+      className="w-11/12 lg:container mx-auto text-center my-24"
       data-aos="fade-up"
       data-aos-duration="1500"
     >
       <div>
-        <h3 className="text-5xl font-heading font-bold my-4">
+        <h3 className="text-4xl lg:text-5xl font-heading font-bold my-4">
           What We <span className="text-[#ff671b]">Achieved</span> Through the
           years
         </h3>

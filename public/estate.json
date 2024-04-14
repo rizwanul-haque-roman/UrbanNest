@@ -9,7 +9,7 @@
     "area": "50,000 sq-ft",
     "location": "House No. 7, Sector 4, Uttara, Dhaka-1230, Bangladesh",
     "facilities": ["Conference Rooms", "High-speed Internet", "Parking Garage"],
-    "img": "https://i.ibb.co/KxM0vcm/id-01.jpg"
+    "img": "https://i.ibb.co/8MjSdZT/id-1.jpg"
   },
   {
     "id": 2,
@@ -21,7 +21,7 @@
     "area": "2,500 sq-ft",
     "location": "Khatunganj Road, Chittagong-4000, Bangladesh",
     "facilities": ["Storefront Windows", "Storage Area", "Security System"],
-    "img": "https://i.ibb.co/Px52v4s/id-02.jpg"
+    "img": "https://i.ibb.co/Wfs4LMm/id-2.jpg"
   },
   {
     "id": 3,
@@ -33,7 +33,7 @@
     "area": "100,000 sq-ft",
     "location": "House No. 32, Road No. 5/A, Dhanmondi, Dhaka-1209, Bangladesh",
     "facilities": ["Loading Docks", "High Ceilings", "Security Cameras"],
-    "img": "https://i.ibb.co/wSykM0R/id-03.jpg"
+    "img": "https://i.ibb.co/wwZrpp2/id-3.jpg"
   },
   {
     "id": 4,
@@ -45,7 +45,7 @@
     "area": "10,000 sq-ft",
     "location": "House No. 11, Road No. 18, Banani 11, Dhaka-1213, Bangladesh",
     "facilities": ["Manufacturing Area", "Office Spaces", "Employee Breakroom"],
-    "img": "https://i.ibb.co/ZW8LJWy/id-04.jpg"
+    "img": "https://i.ibb.co/5G8zTyq/id-4.jpg"
   },
   {
     "id": 5,
@@ -57,7 +57,7 @@
     "area": "3,000 sq-ft",
     "location": "House No. 22, Road No. 46, Gulshan 2, Dhaka-1212, Bangladesh",
     "facilities": ["Kitchen", "Outdoor Seating", "Bar Area"],
-    "img": "https://i.ibb.co/zn5PyQW/id-05.jpg"
+    "img": "https://i.ibb.co/ZBkB58F/id-5.jpg"
   },
   {
     "id": 6,
@@ -69,6 +69,6 @@
     "area": "5,000 sq-ft",
     "location": "10-12 Motijheel C/A, Dhaka-1000, Bangladesh",
     "facilities": ["Stage", "Seating Area", "Lighting System"],
-    "img": "https://i.ibb.co/vZLfzsZ/id-06.jpg"
+    "img": "https://i.ibb.co/gTfbKZ5/id-6.jpg"
   }
 ]

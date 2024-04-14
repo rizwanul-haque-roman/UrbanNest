@@ -3,16 +3,16 @@ import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 const GetInTouch = () => {
   const position = [23.75654, 90.3748];
   return (
-    <div>
+    <div className="w-11/12 lg:container mx-auto">
       <div>
-        <h1 className="text-6xl leading-[70px] font-heading font-bold text-center">
+        <h1 className="text-3xl lg:text-5xl lg:leading-[70px] font-heading font-bold text-center">
           Have any Inquiry?
           <br />
           <span className="text-[#ff671b]">Get in Touch</span> with us. You Will
           Hear From Us Soon
         </h1>
       </div>
-      <div className="container mx-auto my-24 relative">
+      <div className="container mx-auto my-12 lg:my-24 lg:relative">
         <MapContainer
           center={position}
           zoom={14}
@@ -29,7 +29,7 @@ const GetInTouch = () => {
             </Popup>
           </Marker>
         </MapContainer>
-        <div className="w-1/3 border rounded-2xl p-6 bg-white absolute top-16 right-12 z-10">
+        <div className="mt-6 lg:mt-0 lg:w-1/3 border border-[#ff671b] rounded-2xl p-6 bg-white lg:absolute top-16 right-12 z-10">
           <h3 className="text-center font-heading text-3xl font-semibold py-4">
             Get In <span className="text-[#ff671b]">Touch</span>
           </h3>
