@@ -27,9 +27,9 @@ const Realtor = () => {
           process.
         </p>
       </div>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 justify-between my-6">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 justify-between my-6">
         <div
-          className="text-center lg:w-1/4 hover:border rounded-xl hover:shadow-lg p-6"
+          className="text-center border border-[#ff671b] rounded-xl hover:shadow-lg p-6"
           data-aos="flip-left"
           data-aos-duration="1500"
         >
@@ -47,7 +47,7 @@ const Realtor = () => {
           </div>
         </div>
         <div
-          className="text-center lg:w-1/4 hover:border rounded-xl hover:shadow-lg p-6"
+          className="text-center border border-[#ff671b] rounded-xl hover:shadow-lg p-6"
           data-aos="flip-left"
           data-aos-duration="1500"
         >
@@ -65,7 +65,7 @@ const Realtor = () => {
           </div>
         </div>
         <div
-          className="text-center md:col-span-2 lg:w-1/4 hover:border rounded-xl hover:shadow-lg p-6"
+          className="text-center md:col-span-2 lg:col-span-1 border border-[#ff671b] rounded-xl hover:shadow-lg p-6"
           data-aos="flip-left"
           data-aos-duration="1500"
         >
