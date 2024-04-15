@@ -16,21 +16,21 @@ const Details = () => {
     setFacilities(estate.facilities);
   }, [id, estates]);
   return (
-    <div className="font-para">
+    <div className="w-11/12 lg:container mx-auto font-para">
       <Helmet>
         <meta charSet="utf-8" />
         <link rel="icon" type="image/svg+xml" href="/logo.png" />
         <title>Urban Nest | Property Details</title>
         <link rel="canonical" href="http://mysite.com/example" />
       </Helmet>
-      <h2 className="text-black text-6xl font-bold pb-3 text-center font-heading">
+      <h2 className="text-black text-3xl lg:text-6xl font-bold pb-3 text-center font-heading">
         <span className="text-[#ff671b]">{estate.title}</span> of{" "}
         {estate.segment} segment <br />
         for <span className="text-[#ff671b]">{estate.status}</span>
       </h2>
-      <div className="grid lg:grid-cols-2 container mx-auto w-11/12 lg:w-full gap-6 space-y-6 my-10">
+      <div className="grid lg:grid-cols-2 justify-center items-center gap-6 space-y-6 my-10">
         <div className="flex justify-center items-center rounded-2xl">
-          <img src={estate.img} alt="" className="w-1/2 rounded-2xl " />
+          <img src={estate.img} alt="" className="rounded-2xl " />
         </div>
         <div>
           <p className="  font-medium text-[#131313CC] text-xl">

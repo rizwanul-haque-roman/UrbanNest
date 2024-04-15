@@ -1,12 +1,6 @@
 <br/>
 <p align="center">
   <h1 align="center">Urban Nest</h1>
-
-  <p align="center">
-    Read. Explore. Connect.
-    <br/>
-    <br/>
-  </p>
 </p>
 
 ## About The Project
