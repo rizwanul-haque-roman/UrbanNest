@@ -94,7 +94,7 @@ const Update = () => {
             </label>
             <button
               type="submit"
-              className="btn bg-[#ff671b] text-white w-full border-[#ff671b] text-xl mt-6"
+              className="btn bg-[#ff671b] hover:bg-[#ee4f00] text-white w-full border-[#ff671b] text-xl mt-6"
             >
               Save Changes
             </button>
