@@ -1,5 +1,4 @@
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
-import Swal from "sweetalert2";
 
 const GetInTouch = () => {
   const position = [23.75654, 90.3748];

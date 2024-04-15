@@ -64,7 +64,7 @@ const Login = () => {
       <div className=" flex items-center w-10/12 mx-auto">
         <form
           onSubmit={handleSubmit}
-          className="h-[65vh] w-full flex flex-col justify-center gap-4 p-6 backdrop-blur-sm bg-[#ff671b25] rounded-xl lg:rounded-l-xl"
+          className="h-[65vh] w-full flex flex-col justify-center gap-4 p-6 backdrop-blur-sm bg-[#ff671b25] lg:rounded-l-xl"
         >
           <h1 className="font-bold font-heading text-white text-5xl text-center">
             Login Now!

@@ -71,7 +71,7 @@ const Register = () => {
       <div className=" flex items-center w-10/12 mx-auto">
         <form
           onSubmit={handleSubmit}
-          className="h-[65vh] w-full flex flex-col justify-center gap-4 p-6 backdrop-blur-sm bg-[#ff671b25] rounded-l-xl"
+          className="h-[65vh] w-full flex flex-col justify-center gap-4 p-6 backdrop-blur-sm bg-[#ff671b25] lg:rounded-l-xl"
         >
           <h1 className="font-bold text-5xl font-hading text-center text-white">
             Register Now!
