@@ -11,7 +11,7 @@
 
 ## About The Project
 
-![Screen Shot](https://i.ibb.co/pyj4s6x/urban-nest.png)
+![Screen Shot](https://i.ibb.co/gJfgkXn/Screenshot-2024-04-15-at-10-49-51-AM.png)
 
 ### Live link: https://urban-nest-d200f.web.app/
 
